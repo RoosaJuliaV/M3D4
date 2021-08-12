@@ -20,11 +20,11 @@ function filterBooks(query) {
 
 function displayBooks(books) {
     const row = document.querySelector(".row")
-
+    console.log(books)
     row.innerHTML =
         books.map(book => `
             <div class="col-12 col-sm-6 col-md-4">
-                <div class="card" id="${book}">
+                <div class="card" id="${book.id}">
                     <img src="${book.img}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">${book.title}</h5>
@@ -43,7 +43,7 @@ function displayBooks(books) {
                           <button
                             type="button"
                             class="btn btn-sm btn-danger"
-                            onclick="removeBook(${book})"
+                            onclick="removeBook(${book.id})"
                            >
                             Skip
                           </button>
@@ -57,9 +57,11 @@ function displayBooks(books) {
 
 }
 
-const removeBook = function (book) {
-    let card = document.getElementById(book)
+const removeBook = function (id) {
+    let card = document.getElementById(id)
     card.remove()
   }
+
+// const addToCart = function ()
 
 
