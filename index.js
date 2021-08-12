@@ -28,7 +28,7 @@ function displayBooks(books) {
                     <img src="${book.img}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">${book.title}</h5>
-                        <p class="card-text">${book.price}</p>
+                        <p class="card-text">${book.price}€</p>
                         <div
                         class="d-flex justify-content-between align-items-center"
                       >
@@ -36,7 +36,7 @@ function displayBooks(books) {
                           <button
                             type="button"
                             class="btn btn-sm btn-success"
-                            onclick="addToCart(${book})"
+                            onclick="addToCart(${book.id})"
                           >
                             Add to cart
                           </button>
@@ -62,5 +62,6 @@ const removeBook = function (id) {
     card.remove()
   }
 
-
-
+const addToCart = function (id) {
+    
+}
