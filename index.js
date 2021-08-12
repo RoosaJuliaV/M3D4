@@ -62,6 +62,5 @@ const removeBook = function (id) {
     card.remove()
   }
 
-// const addToCart = function ()
 
 
