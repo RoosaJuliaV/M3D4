@@ -35,15 +35,16 @@ function displayBooks(books) {
                         <div class="btn-group">
                           <button
                             type="button"
-                            class="btn btn-sm btn-outline-secondary"
+                            class="btn btn-sm btn-success"
+                            onclick="addToCart(${book})"
                           >
                             Add to cart
                           </button>
                           <button
                             type="button"
-                            class="btn btn-sm btn-outline-secondary"
+                            class="btn btn-sm btn-danger"
                             onclick="removeBook(${book})"
-                          >
+                           >
                             Skip
                           </button>
                         </div>
@@ -60,3 +61,5 @@ const removeBook = function (book) {
     let card = document.getElementById(book)
     card.remove()
   }
+
+
